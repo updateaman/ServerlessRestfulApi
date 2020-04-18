@@ -22,13 +22,13 @@
        - checkout
        - run: yarn serverless deploy 
 
-workflows:
-  main:
-    jobs:
-      - prepare
-      - build
-        requires:
-          - prepare
-      - deploy
-        requires:
-          - build
+ workflows:
+   main:
+     jobs:
+       - prepare
+       - build
+         requires:
+           - prepare
+       - deploy
+         requires:
+           - build
