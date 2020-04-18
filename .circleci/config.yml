@@ -27,8 +27,8 @@
      jobs:
        - prepare
        - build
-         requires:
-           - prepare
+          requires:
+            - prepare
        - deploy
-         requires:
-           - build
+          requires:
+            - build
