@@ -1,0 +1,34 @@
+ version: 2.1
+
+ orbs:
+  win: circleci/windows@2.2.0
+
+ jobs:
+   prepare:
+     executor: nodejs
+     steps:
+       - checkout
+       - run: yarn install
+       
+   build:
+     executor: nodejs    
+     steps:
+       - checkout
+       - run: yarn build
+   
+   deploy:
+     executor: nodejs
+     steps:
+       - checkout
+       - run: yarn serverless deploy 
+
+workflows:
+  main:
+    jobs:
+      - prepare
+      - build
+        requires:
+          - prepare
+      - deploy
+        requires:
+          - build

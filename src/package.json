@@ -1,8 +1,12 @@
 {
+  "name": "serverlessrestfulapi",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "./build.cmd"
   },
   "devDependencies": {
+    "serverless": "^1.67.3",
     "serverless-iam-roles-per-function": "^2.0.2"
   }
 }
