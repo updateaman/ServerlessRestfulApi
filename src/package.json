@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "./build.sh"
+    "build": "./build.cmd"
   },
   "devDependencies": {
     "serverless-iam-roles-per-function": "^2.0.2"
