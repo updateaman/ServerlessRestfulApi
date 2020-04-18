@@ -12,4 +12,4 @@ plugins:
   - serverless-iam-roles-per-function
 
 package: 
-  artifact: bin\release\netcoreapp2.1\ServerlessRestfulApi.zip
+  artifact: src\bin\release\netcoreapp2.1\ServerlessRestfulApi.zip
