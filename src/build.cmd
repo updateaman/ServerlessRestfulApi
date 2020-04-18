@@ -1,2 +1,2 @@
 dotnet restore
-dotnet lambda package --configuration release --framework netcoreapp2.2 --output-package bin/release/netcoreapp2.2/ServerlessRestfulApi.zip
+dotnet lambda package --configuration release --framework netcoreapp2.1 --output-package bin/release/netcoreapp2.1/ServerlessRestfulApi.zip
