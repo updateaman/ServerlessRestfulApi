@@ -26,9 +26,9 @@
    main:
      jobs:
        - prepare
-       - build
+       - build:
           requires:
             - prepare
-       - deploy
+       - deploy:
           requires:
             - build
