@@ -2,6 +2,7 @@
 
  orbs:
   node: circleci/node@2.0.2
+  win: circleci/windows@2.2.0
 
  jobs:
    prepare:
@@ -11,10 +12,9 @@
        - run: yarn install
        
    build:
-     executor: node/default    
+     executor: win/default    
      steps:
        - checkout
-       - run: chmod +x build.sh
        - run: yarn build
    
    deploy:
