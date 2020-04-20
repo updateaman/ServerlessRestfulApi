@@ -1,12 +1,11 @@
  version: 2.1
 
  orbs:
-  node: circleci/node@2.0.2
   win: circleci/windows@2.2.0
 
  jobs:
    prepare:
-     executor: node/default
+     executor: win/default
      steps:
        - checkout
        - run: yarn install
@@ -18,7 +17,7 @@
        - run: yarn build
    
    deploy:
-     executor: node/default
+     executor: win/default
      steps:
        - checkout
        - run: yarn serverless deploy 
