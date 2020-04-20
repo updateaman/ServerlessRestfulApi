@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "./build.sh"
+    "build": "./build.sh",
+    "deploy": "sls deploy --aws-profile personal"
   },
   "devDependencies": {
     "serverless": "^1.67.3",
