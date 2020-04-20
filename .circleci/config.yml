@@ -2,24 +2,39 @@
 
  orbs:
   win: circleci/windows@2.2.0
+ 
+ commands:
+  restore_node_modules:
+    steps:
+      - restore_cache:
+          keys:
+            - v1-node_modules-{{ checksum "yarn.lock" }}
+            - v1-node_modules
 
  jobs:
    prepare:
      executor: win/default
      steps:
        - checkout
+       - restore_node_modules
        - run: yarn install
+       - save_cache:
+          key: v1-node_modules-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
        
    build:
      executor: win/default    
      steps:
        - checkout
+       - restore_node_modules
        - run: yarn build
    
    deploy:
      executor: win/default
      steps:
        - checkout
+       - restore_node_modules
        - run: yarn serverless deploy 
 
  workflows:
