@@ -1,3 +1,6 @@
 hello:
   handler: ServerlessRestfulApi::ServerlessRestfulApi.Handler::Hello
-  
+  events:
+    - http:
+        path: hello
+        method: get
