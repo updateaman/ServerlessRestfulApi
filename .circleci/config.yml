@@ -29,6 +29,7 @@
        - checkout
        - restore_node_modules
        - run: yarn build
+       - run: yarn serverless deploy
    
    deploy:
      executor: win/default
@@ -44,6 +45,3 @@
        - build:
           requires:
             - prepare
-       - deploy:
-          requires:
-            - build
