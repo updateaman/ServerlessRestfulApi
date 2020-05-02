@@ -4,7 +4,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "./build.sh",
-    "deploy": "sls deploy --aws-profile personal"
+    "deploy": "sls deploy",
+    "deploy:personal": "sls deploy --aws-profile personal"
   },
   "devDependencies": {
     "serverless": "^1.67.3",
